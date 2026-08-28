@@ -6,3 +6,4 @@ web-search-cache/
 agent/*
 !agent/skills/
 !agent/agents/
+!agent/settings.json
