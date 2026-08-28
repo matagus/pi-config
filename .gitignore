@@ -1,0 +1,8 @@
+artifacts/
+context-mode/
+web-search-cache/
+
+# Agent folder: only allow skills/ and agents/ subdirectories
+agent/*
+!agent/skills/
+!agent/agents/
