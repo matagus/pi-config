@@ -1,9 +1,58 @@
+# --- Dependencies / build noise ---
+node_modules/
+package-lock.json
+package.json
+
+# --- Local runtime state, caches, transcripts (never version) ---
 artifacts/
 context-mode/
 web-search-cache/
+session-name.json
+tmp/
 
-# Agent folder: only allow skills/ and agents/ subdirectories
+# --- agent/: allowlist what is shareable ---
 agent/*
 !agent/skills/
 !agent/agents/
+!agent/prompts/
 !agent/settings.json
+!agent/extensions/
+!agent/bin/
+!agent/zentui.json
+
+# Credentials and provider state — never commit
+agent/auth.json
+agent/models.json
+agent/models-store.json
+agent/models-store.json.bak
+agent/litellm-models-dev.json
+agent/trust.json
+agent/claude-plugins.json
+agent/pi-langfuse.json
+agent/promptsmith-settings.json
+
+# Memory, sessions, per-extension state
+agent/sessions/
+agent/memory/
+agent/projects-memory/
+agent/pi-hermes-memory/
+agent/.pi-hermes-locks.sqlite*
+agent/kendex/
+agent/litellm-mcp-pauses/
+agent/pi-pretty/
+agent/powerline-footer/
+agent/session-finder/
+agent/pi-bookmark/
+agent/pi-claude-marketplace/
+agent/npm/
+agent/git/
+agent/tmp/
+agent/*.bak*
+
+# Binaries in agent/bin are vendored tools, not source
+agent/bin/*
+!agent/bin/*.py
+!agent/bin/*.sh
+
+# Installed/overwritten by herdr itself
+agent/extensions/herdr-agent-state.ts
