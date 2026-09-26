@@ -111,7 +111,8 @@ maintain it are in [docs/agents.md](docs/agents.md).
 hardcode ruff, mypy, pytest, htmx, and Django conventions. Only `explore`, `plan`, and
 `general-purpose` are domain-neutral.
 
-Panes are herdr-managed (`pi-herdr-agents`, `pi-herdr-status`); managed git worktrees come from
+Panes are herdr-managed ([`pi-herdr-agents`](https://github.com/giuseppecrj/pi-herdr-agents),
+[`pi-herdr-status`](https://github.com/dereknex/pi-extensions)); managed git worktrees come from
 [`pi-worktrees`](https://github.com/0xkuze/pi-worktrees), installed from npm.
 
 ## Extensions
@@ -128,7 +129,8 @@ integration, so it is not versioned.)
 Everything else comes from the 36-entry `packages` list in `settings.json`: web access and search,
 artifacts, context-mode, LSP routes, GitHub PR tooling, Langfuse tracing, loop-police and
 cc-safety-net guardrails, session finder/manager/bookmark, promptsmith, zentui, pretty, task lists,
-and more. Each one is named with what it adds in [docs/packages.md](docs/packages.md).
+and more. Each one is named with what it adds — and linked to its source repo — in
+[docs/packages.md](docs/packages.md).
 
 ## Notable settings
 
